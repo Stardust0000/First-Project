@@ -1,0 +1,145 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+      <main>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Voice your thoughts and shape our website by sharing your valuable feedback</p>
+        <form id="survey-form">
+          <fieldset>
+          <label for="name-label" id="name-label">Enter your name: <input id="name" type="text" required placeholder="Name">
+          </label>
+          <label for="age-label" id="age-label">Enter your date of birth:<input id="age" type="date" required>
+          </label>
+  
+          <label for="email-label" id="email-label">Enter your email:<input id="email" type="email" required placeholder="Email">
+          </label>
+    
+          <label for="number-label" id="number-label">Enter your 10 digits phone number:<input id="number" type="number" pattern="[0-9]{10}" placeholder="Contact Number" min="1000000000" max="9999999999" required>
+          </label>
+          </fieldset>
+          <fieldset>
+            <label for="dropdown">Did you complete your course?
+              <select id="dropdown">
+                <option value=""></option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+              </select>
+            </label>
+            </fieldset>
+       <fieldset>
+         <legend>Select Occupation</legend>
+<label for="radio"><input type="radio" id="radio" name="occupation" value="select-1">Student</label> 
+          <label for="radio"><input type="radio" name="occupation" id="radio" value="select-2">Employee</label> 
+          <label for="radio"><input type="radio" name="occupation" id="radio" value="select-3">Freelancer</label> 
+        </fieldset>
+        <fieldset>
+<label>Select your course:</label>
+<input type="checkbox" id="checkbox" required value="option-1">Basic Responsive Web Designing<br/>
+<input type="checkbox" id="checkbox" value="option-2">Javascript Algorithms<br/>
+<input type="checkbox" id="checkbox" value="option-3">Node JS<br/>
+<input type="checkbox" id="checkbox" value="option-4">React JS
+          </fieldset>
+        <fieldset>
+<label for="textarea">Share your learning experience here</label>
+<textarea id="textarea" name="textarea" rows="3" cols="30" placeholder="The course...." >
+            </textarea>
+        </fieldset>
+<label for="terms-n-conditions"><input type="checkbox" id="terms-n-conditions" value="yes">I agree to the terms and conditions</label>
+
+    <input type="submit" name="Submit" id="submit"/> 
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+  width:100%;
+  height:100vh;
+  font-family: 'Ubuntu', sans-serif;
+  font-size:18px;
+  background: linear-gradient(to right, rgb(15, 15, 45), rgb(157, 39, 157));
+color: rgb(225, 255, 255);
+}
+#title{
+  text-align:center;
+  margin: 1em auto;
+  font-size:35px;
+  text-decoration: solid;
+}
+#description{
+  text-align: center;
+  font-size: 16px;
+  margin: 1em auto;
+}
+form{
+   width: 80vw;
+    max-width: 600px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+fieldset{
+  border:none;
+  border-bottom: 1px solid  rgb(59, 59, 169);
+  padding: 1rem 0;
+}
+label{
+  display:block;
+  margin: 0.3rem 0;
+}
+input, textarea, select{
+margin: 10px 0 0 0;
+width:100%;
+min-height: 2em;
+}
+input, textarea{
+  background-color: rgba(10, 10, 30, 0.6);
+  border: 1px solid rgba(10, 10, 30, 0.6);
+  color:rgb(255, 255, 255);
+}
+#dropdown option{
+  border: none;
+}
+#radio{
+  margin:0 0.5em 0 0;
+  width:unset;
+display:inline;  vertical-align: middle;
+}
+#checkbox{
+  margin: 0 0.5em 0 0;
+  width: unset;
+vertical-align: middle;
+  display:inline-block;
+}
+#terms-n-conditions{
+  width: unset;
+  vertical-align: middle;
+margin:0 0.5em 0 0;
+display: inline-block;
+}
+#submit{
+  display:block;
+  width: 50%;
+  height:2rem;
+  margin: 1em auto;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  background-color: rgb(10, 10, 30);
+  border-radius: 4px; 
+}
+
+** end of undefined **
+
