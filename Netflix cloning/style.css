@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    /*font-family: 'Poppins', sans-serif;*/
+}
+body{
+    background-color: black;
+}
+.main{
+    background-image: url("Assets/images/bg1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+/*    background-size:max(1200px,100vw) ;*/
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    background-size: cover;
+}
+.main .box{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.852),rgba(0, 0, 0,0.65));
+    position: absolute;
+    top: 0;
+}
+nav{
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 80vw;
+    display: inline-flex;
+    flex-direction: row;
+    height: 52px;
+    align-items: center;
+    justify-items: center;
+    
+    margin-top: 1rem;
+}
+nav img{
+    height: 8rem;
+    width: 9.5rem;
+    color: rgb(229, 9, 20);
+    position: relative;
+    z-index: 10;
+    margin-right: 39rem;
+}
+nav button{
+    position: relative;
+    z-index: 10;
+    border-radius: 0.3rem;
+}
+nav #lang{
+    position: relative;
+    z-index: 10;
+    border-radius: 0.3rem;
+    background-color: rgba(65, 63, 63, 0.288);
+    color: white;
+    height: 2rem;
+    width: 7.5rem;
+    border:0.2px solid rgb(224, 220, 220);
+    text-align: center;
+    z-index: 1;
+    margin-right: 0.6rem;
+}
+nav .signin{
+    background-color: rgb(229, 9, 20);
+    color: white;
+    height: 2rem;
+    width: 5rem;
+    border: none;
+    font-weight: bold;
+}
+.hero{
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3vh;
+    position: relative;/*
+    padding: 9rem 5rem 0 ;*/
+    margin: 6rem 3rem 0;
+    gap: 15px;
+    height: 40%;
+}
+.hero> :nth-child(1){/*this becomes 700 weight, 32px in 789px*/
+    width: 40rem;
+    white-space: normal;
+    font-weight: 900;
+    font-size: 56px;
+    display: block;
+    text-align: center;
+    line-height: 125%;
+} 
+.hero> :nth-child(2){
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.hero> :nth-child(3){
+    /* when in tablet mode width: 40%;*/
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 2.3rem;
+    text-align: center;
+}
+.main .text{
+    width: 100%;
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    padding-top: 0.1rem;
+}
+.main .text input, .main .text button{
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-width: .11rem;
+    height: 8.5vh;
+}
+.main .text input{
+    width:29vw ;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    background-color: rgba(35, 33, 58, 0.71);
+    padding: 5px;
+    margin-right: 10px;
+    border: 0.1rem solid white;
+}
+.main .text input::placeholder{
+    font-weight: 300;
+    font-size: 16px;
+    color: rgb(255, 255, 255, 0.7);
+    z-index: 1;
+    padding: 1rem;
+}
+.main .text button{
+    width:12vw ;
+    padding: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size:18px ;
+    font-weight: 500;
+    background-color: rgb(229, 9, 20);
+    color: rgb(255, 255, 255);
+    border: none;
+    margin-bottom: 1rem;
+}
+.container {
+    /*width: 100%;
+    background: black;*/
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.curve {
+    width: 100%;
+    height: 50%;/*bfr 100%*/
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    border-bottom: none;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.curve::before {
+    content: '';
+    position: absolute;
+    top: 65%;
+    /*left: 50%;*/
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(
+        50% 500% at 50% -420%,
+        rgba(64, 97, 231, 0.4) 80%,
+        rgba(0, 0, 0, 0.1) 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border: 0.2rem solid transparent;
+}
+.cards-img-container{
+    height: 100vh;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+    
+}
+.img-container{
+    display: flex;
+    width: 100%;
+    animation: slides 20s infinite;
+}
+.img-card{
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+    transition: transform 0.9s ease-in-out;
+}
+.img-container li{
+    list-style: none;
+}
+.img-card .image{
+    background-color: wheat;
+}
+@keyframes slides{
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-100%);}
+    50% {transform: translateX(-200%);}
+    75% {transform: translateX(-300%);}
+    100% {transform: translateX(-400%);}
+}
+/*
+.cards{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+.cards h2{
+    color: white;
+    float: left;
+    margin-left: 10rem;
+}
+.img-container {
+    border: none;
+    height: 100%;
+    width: 80vw;
+    margin: 1.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-container li{
+    list-style: none;
+}
+.img-container .default-img-card{
+    max-height: 80vh;
+    height: 10rem;
+    width: 90%;
+    overflow: hidden;
+    background-color: rgb(224, 138, 8);
+}
+.img-container .num{
+    color: white;
+    font-weight: bolder;
+    font-size: 56px;
+    font-variant-position: initial;
+}
+.img-container .img{
+    height: 10rem;
+    width: 10rem;
+}*/
